@@ -14,7 +14,7 @@ export default function Application({ name, closeApp, body }) {
                 <TopBar closeWindow={closeWindow} name={name} />
                 <Resizable defaultSize={{
                     width: 500,
-                    height: 250,
+                    height: 350,
                 }}>
                     <div className="app-body">
                         {body}

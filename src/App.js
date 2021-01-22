@@ -3,6 +3,7 @@ import Application from './apps/Application';
 import Dock from './os/Dock';
 import './styles/App.scss';
 import { Catalogue } from './Catalogue';
+import StyleManager from './styles/StyleManager';
 
 function App() {
   const [apps, setApps] = useState([]);
@@ -54,6 +55,7 @@ function App() {
   
   return (
     <div className="os">
+      <StyleManager/>
       {renderApps}
       <Dock addToView={openApp} catalogue={Catalogue}/>
     </div>
