@@ -1,0 +1,44 @@
+$bg: ghostwhite;
+$appBg: whitesmoke;
+
+body {
+    background-color: $bg;
+}
+
+.app {
+    background-color: grey;
+    border-radius: 0.7rem;
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    .top-bar {
+        border-top-left-radius: 0.7rem;
+        border-top-right-radius: 0.7rem;
+        background-color: darkgray;
+        display: flex;
+        & > * {
+            border-radius: 50%;
+            width: 1em;
+            height: 1em;
+            text-align: center;
+            vertical-align: auto;
+            background-color: lightgrey;
+            padding: 0.1rem;
+            margin: 0.4rem;
+        }
+    }
+}
+
+.dock {
+    position: fixed;
+    margin: auto;
+    bottom: 0;
+}
+
+.app-shortcut {
+    background: magenta;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.4rem;
+    border-radius: 1rem;
+}
