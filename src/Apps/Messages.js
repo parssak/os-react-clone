@@ -1,5 +1,5 @@
 import React from 'react'
-import UserBubble from '../helperComponents/Messages/UserBubble';
+import UserBubble from '../helper-components/Messages/UserBubble';
 import "../styles/apps/Messages.scss";
 
 

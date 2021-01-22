@@ -1,55 +1,28 @@
 import React, { useState } from 'react'
+import Application from './apps/Application';
+import Dock from './os/Dock';
 import './styles/App.scss';
-import Application from './Apps/Application';
-import Dock from './OsComponents/Dock';
-import Firefox from './Apps/Firefox';
-import Messages from './Apps/Messages';
-import Spotify from './Apps/Spotify';
-import Mail from './Apps/Mail';
+import { Catalogue } from './Catalogue';
 
-const firefox = {
-  name: "firefox",
-  color: '#ff4500',
-  body: <Firefox/>
-}
-
-const spotify = {
-  name: "spotify",
-  color: 'limegreen',
-  body: <Spotify />
-}
-const mail = {
-  name: "mail",
-  color: 'lightblue',
-  body: <Mail />
-}
-const messages = {
-  name: "messages",
-  color: 'green',
-  body: <Messages />
-}
-
-const catalogue = [firefox, spotify, mail, messages]
 function App() {
   const [apps, setApps] = useState([]);
-  const [toggler, settoggler] = useState(false);
+  const [toggler, setToggler] = useState(false);
 
   function openApp(appName) {
-    let wasCaught = false;
+    let alreadyOpen = false;
     apps.forEach(e => {
       if (e.name === appName) {
-        console.log("caught:", e);
-        wasCaught = true;
+        alreadyOpen = true;
         
       }
     })
-    if (wasCaught) return;
+    if (alreadyOpen) return;
     addAppToView(appName);
   }
 
   function addAppToView(appName) {
     let newApp = null;
-    catalogue.forEach(e => {
+    Catalogue.forEach(e => {
       if (e.name === appName) {
         newApp = e;
       }
@@ -74,14 +47,15 @@ function App() {
       allApps.splice(appIndex, 1);
       setApps(allApps);
     }
-    settoggler(!toggler);
+    setToggler(!toggler);
   }
-  let renderApps = apps.map(app => (
-    <Application name={app.name} key={app.key} closeApp={closeApp} body={app.body}/>));
+
+  let renderApps = apps.map(app => (<Application name={app.name} key={app.key} closeApp={closeApp} body={app.body} />));
+  
   return (
     <div className="os">
       {renderApps}
-      <Dock addToView={openApp} catalogue={catalogue}/>
+      <Dock addToView={openApp} catalogue={Catalogue}/>
     </div>
   );
 }
