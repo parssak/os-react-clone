@@ -58,7 +58,7 @@ function App() {
       
       <StyleManager/>
       {renderApps}
-      <Dock addToView={openApp} catalogue={Catalogue}/>
+      <Dock addToView={openApp} catalogue={Catalogue} />
     </div>
   );
 }

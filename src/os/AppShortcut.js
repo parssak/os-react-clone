@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function AppShortcut({ name, color, openApp }) {
+export default function AppShortcut({ name, color, openApp, image }) {
     
     function clicked(e) {
         console.log("CLICKED", e);
@@ -9,8 +9,10 @@ export default function AppShortcut({ name, color, openApp }) {
 
     return (
         <div className="app-shortcut" onClick={clicked}>
-            <div className="icon" style={{ backgroundColor: color }}></div>
-            {name}
+            <div className="icon">
+                <img src={image} alt=""></img>
+            </div>
+            {/* {name} */}
         </div>
     )
 }

@@ -13,6 +13,7 @@ body {
 
     color: $text-dark;
     overflow: hidden;
+   
 }
 
 .glassy {
@@ -22,6 +23,7 @@ body {
     border-radius: 0.7rem;
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
     position: absolute;
+     transition: background-color 0.5s ease-in-out;
 }
 
 .app {
@@ -99,23 +101,42 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+
+    .contents {
+        position: relative;
+        display: flex;
+        background-color: $transparent-light;
+        &.dark {
+            background-color: $transparent-dark;
+        }
+
+        // margin-bottom: 1rem;
+    }
 }
 
 .app-shortcut {
-    margin: 0.3rem;
-
+    // margin: 0.2rem;
+    margin-bottom: 0.2rem;
     .icon {
-        border-radius: 1rem;
-        background-color: blue;
         width: 4rem;
         height: 4rem;
         transition: all 0.1s ease-in-out;
         transform-origin: bottom;
+
+        img {
+            max-width: 4rem;
+            width: auto;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            // transform: scale(1.1);
+        }
         &:hover {
             transform: scale(1.05) translateY(-0.4rem);
         }
     }
-
+    font-size: 0.8rem;
+    text-transform: capitalize;
     text-align: center;
 }
 
