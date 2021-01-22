@@ -3,25 +3,22 @@ import Draggable from 'react-draggable';
 import { Resizable } from 're-resizable';
 import TopBar from './TopBar';
 
-
-
-
-export default function Application({ name, closeApp,body }) {
-    console.log("HELLO");
+export default function Application({ name, closeApp, body }) {
     function closeWindow() {
-        console.log("closing", name);
         closeApp(name);
     }
 
     return (
         <Draggable handle=".handle">
             <div className="app">
-                <TopBar closeWindow={closeWindow} name={name}/>
+                <TopBar closeWindow={closeWindow} name={name} />
                 <Resizable defaultSize={{
-                    width: 320,
-                    height: 200,
+                    width: 500,
+                    height: 250,
                 }}>
-                    {body}
+                    <div className="app-body">
+                        {body}
+                    </div>
                 </Resizable>
             </div>
         </Draggable>

@@ -1,10 +1,21 @@
 import React from 'react'
+import UserBubble from '../helperComponents/Messages/UserBubble';
+import "../styles/apps/Messages.scss";
+
 
 export default function Messages() {
     return (
         <div className="messages">
-            <h2>Messages</h2>
-            <h3>message somebody</h3>
+            <div className="users bleft">
+                <UserBubble />
+                <UserBubble />
+                <UserBubble />
+                <UserBubble />
+                <UserBubble />
+            </div>
+            <div className="content bright">
+                This is the content
+            </div>
         </div>
     )
 }

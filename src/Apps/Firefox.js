@@ -5,7 +5,7 @@ export default function Firefox() {
     return (
         <div className="firefox">
             <div className="search-bar">
-                Search for stuff here
+                <input type="search" name="search" id="firefox-search" placeholder="search here"/>
             </div>
         </div>
     )

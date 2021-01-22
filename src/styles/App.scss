@@ -1,9 +1,10 @@
-$bg: rgb(21, 21, 43);
-$appBg: whitesmoke;
+@import './master';
+
+$borderRadius: 0.7rem;
 
 body {
-    background-color: $bg;
-    color: white;
+    background-color: $bg-dark;
+    color: $text-dark;
     overflow: hidden;
 }
 
@@ -13,9 +14,41 @@ body {
     display: inline-block;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     position: absolute;
-    h2 {
-        margin-left: 1em;
+    h2,
+    h3,
+    p {
+        margin-left: 1rem;
         text-transform: capitalize;
+    }
+    // border-bottom-left-radius: $borderRadius;
+    // border-bottom-right-radius: $borderRadius;
+
+    .app-body {
+        // border-bottom-left-radius: $borderRadius;
+        // border-bottom-right-radius: $borderRadius;
+
+        .bright {
+            border-bottom-right-radius: $borderRadius;
+        }
+
+        .bleft {
+            border-bottom-left-radius: $borderRadius;
+        }
+        // & > div:first-child {
+        // border-top-left-radius: 10px;
+        // border-top-right-radius: 10px;
+        // }
+
+        // & > div:last-child {
+        //     border-bottom-left-radius: 10px;
+        //     border-bottom-right-radius: 10px;
+        // }
+
+        height: 100%;
+        & > * {
+            height: 100%;
+            // border-radius: none;
+        }
     }
 
     .top-bar {
@@ -49,14 +82,13 @@ body {
 }
 
 .dock {
-    // background-color: grey;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     width: 500px;
     height: 2rem;
-    margin: 2rem auto; /* Will not center vertically and won't work in IE6/7. */
+    margin: 2rem auto;
     left: 0;
     right: 0;
     bottom: 0;
@@ -78,4 +110,8 @@ body {
     }
 
     text-align: center;
+}
+
+input:focus::placeholder {
+    color: transparent;
 }

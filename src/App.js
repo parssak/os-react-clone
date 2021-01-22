@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import './App.scss';
-import Application from './Application';
-import Dock from './Dock';
+import './styles/App.scss';
+import Application from './Apps/Application';
+import Dock from './OsComponents/Dock';
 import Firefox from './Apps/Firefox';
 import Messages from './Apps/Messages';
 import Spotify from './Apps/Spotify';
