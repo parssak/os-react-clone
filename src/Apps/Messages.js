@@ -4,6 +4,7 @@ import { Contacts } from '../data/Contacts';
 import "../styles/apps/Messages.scss";
 import { useSelector } from 'react-redux';
 
+
 export default function Messages() {
     const theme = useSelector(state => state.theme);
     const [selectedUser, setSelectedUser] = useState(Contacts[0]);
@@ -17,22 +18,23 @@ export default function Messages() {
 
     return (
         <div className={"messages " + theme}>
+
             <div className="users bleft">
-                {Contacts.map((e) => (
-                    <UserBubble
-                        name={e.name}
-                        key={e.name}
-                        clicked={clickedUser} user={e}
-                        isSelected={selectedUser} />))}
+                    {Contacts.map((e) => (
+                        <UserBubble
+                            name={e.name}
+                            key={e.name}
+                            clicked={clickedUser} user={e}
+                            isSelected={selectedUser} />))}
             </div>
 
-            <div className="content bright">
+            <div className={"content bright "+ theme}>
                 {selectedUser &&
-                <>
-                    <div className="to">{selectedUser.name}</div>
-                    <div className="thread">
+                    <>
+                        <div className="to">{selectedUser.name}</div>
+                        <div className="thread">
 
-                    </div>
+                        </div>
                     </>}
             </div>
         </div>

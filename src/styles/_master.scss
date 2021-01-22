@@ -1,16 +1,18 @@
 // Global Styling Colors
 
 // Light Theme
-$bg-light: whitesmoke;
-$bg2-light: rgb(206, 206, 206);
-$selected-light: floralwhite;
+$bg-light: rgb(242, 242, 242);
+$bg2-light: rgb(255, 255, 255);
+$selected-light: lightgrey;
 $accent1-light: rgb(235, 234, 234);
+$accent2-light: darkgrey;
 $text-light: black;
 
 // Dark Theme
 $bg-dark: rgb(21, 21, 43);
 $bg2-dark: rgb(57, 57, 72);
-$selected-dark: rgb(34, 33, 36);
+$selected-dark: rgb(46, 45, 48);
+$accent2-dark: rgb(84, 84, 84);
 $accent1-dark:rgb(35, 25, 42);
 
 $text-dark: whitesmoke;
