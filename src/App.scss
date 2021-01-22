@@ -4,13 +4,13 @@ $appBg: whitesmoke;
 body {
     background-color: $bg;
     color: white;
+    overflow: hidden;
 }
 
 .app {
     background-color: grey;
     border-radius: 0.7rem;
     display: inline-block;
-    min-width: 20rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     position: absolute;
     h2 {

@@ -6,7 +6,7 @@ import TopBar from './TopBar';
 
 
 
-export default function Application({ name, closeApp }) {
+export default function Application({ name, closeApp,body }) {
     console.log("HELLO");
     function closeWindow() {
         console.log("closing", name);
@@ -21,7 +21,7 @@ export default function Application({ name, closeApp }) {
                     width: 320,
                     height: 200,
                 }}>
-                    <h2>{name}</h2>
+                    {body}
                 </Resizable>
             </div>
         </Draggable>

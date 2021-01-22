@@ -2,28 +2,34 @@ import React, { useState } from 'react'
 import './App.scss';
 import Application from './Application';
 import Dock from './Dock';
+import Firefox from './Apps/Firefox';
+import Messages from './Apps/Messages';
+import Spotify from './Apps/Spotify';
+import Mail from './Apps/Mail';
 
 const firefox = {
   name: "firefox",
   color: '#ff4500',
+  body: <Firefox/>
 }
 
 const spotify = {
   name: "spotify",
-  color: 'limegreen'
+  color: 'limegreen',
+  body: <Spotify />
 }
 const mail = {
   name: "mail",
-  color: 'lightblue'
+  color: 'lightblue',
+  body: <Mail />
 }
 const messages = {
   name: "messages",
-  color: 'green'
+  color: 'green',
+  body: <Messages />
 }
 
 const catalogue = [firefox, spotify, mail, messages]
-
-
 function App() {
   const [apps, setApps] = useState([]);
   const [toggler, settoggler] = useState(false);
@@ -71,7 +77,7 @@ function App() {
     settoggler(!toggler);
   }
   let renderApps = apps.map(app => (
-    <Application name={app.name} key={app.key} closeApp={closeApp} />));
+    <Application name={app.name} key={app.key} closeApp={closeApp} body={app.body}/>));
   return (
     <div className="os">
       {renderApps}
