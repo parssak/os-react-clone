@@ -1,8 +1,9 @@
-$bg: ghostwhite;
+$bg: rgb(21, 21, 43);
 $appBg: whitesmoke;
 
 body {
     background-color: $bg;
+    color: white;
 }
 
 .app {
@@ -11,6 +12,7 @@ body {
     display: inline-block;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     position: absolute;
+
     .top-bar {
         border-top-left-radius: 0.7rem;
         border-top-right-radius: 0.7rem;
@@ -30,15 +32,26 @@ body {
 }
 
 .dock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    margin: auto;
+    width: 500px;
+    height: 2rem;
+    margin: 2rem auto; /* Will not center vertically and won't work in IE6/7. */
+    left: 0;
+    right: 0;
     bottom: 0;
 }
 
 .app-shortcut {
-    background: magenta;
-    width: 4rem;
-    height: 4rem;
-    margin: 0.4rem;
-    border-radius: 1rem;
+    color: #ff4500;
+    margin: 0.3rem;
+
+    .icon {
+        border-radius: 1rem;
+        background-color:blue;
+        width: 4rem;
+        height: 4rem;
+    }
 }

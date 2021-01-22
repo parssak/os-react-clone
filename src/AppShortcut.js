@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function AppShortcut() {
+export default function AppShortcut({name, color}) {
     return (
-        <div className="app-shortcut">
-            {/* APP NAME */}
+        <div className="app-shortcut" >
+            <div className="icon" style={{ backgroundColor: color }}></div>
+            {name}
         </div>
     )
 }
