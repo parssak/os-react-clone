@@ -9,7 +9,12 @@ body {
 }
 
 .app {
-    background-color: grey;
+    &.dark {
+        background: $bg2-dark;
+    }
+    &.light {
+        background: $bg-light;
+    }
     border-radius: 0.7rem;
     display: inline-block;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
@@ -25,7 +30,7 @@ body {
         & > * {
             height: 100%;
         }
-        
+
         .bright {
             border-bottom-right-radius: $borderRadius;
         }
@@ -37,9 +42,14 @@ body {
     .top-bar {
         border-top-left-radius: 0.7rem;
         border-top-right-radius: 0.7rem;
-        background-color: darkgray;
         display: flex;
         box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.5);
+        &.dark {
+            background: $accent1-dark;
+        }
+        &.light {
+            background: $accent1-light;
+        }
         & > * {
             border-radius: 50%;
             width: 1em;
@@ -49,7 +59,7 @@ body {
             &.exit,
             &.minimize,
             &.maximize {
-                background-color: lightgrey;
+                background-color: darkgrey;
             }
 
             &.barName {

@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+// import UserThemeListener from './UserThemeListener';
+import { toggleLight, toggleDark } from '../actions';
 
 export const UIColors = {
     dark: {
@@ -15,7 +18,9 @@ export const UIColors = {
 
 
 export default function StyleManager() {
-    const [theme, setTheme] = useState('dark');
+    const theme = useSelector(state => state.theme);
+    const dispatch = useDispatch();
+    
 
     useEffect(() => {
         const { bg, selected, text } = (theme === 'dark' ? UIColors.dark : UIColors.light);
@@ -24,7 +29,8 @@ export default function StyleManager() {
     }, [theme]);
 
     function changeTheme() {
-            setTheme((theme === 'dark') ? 'light' : 'dark')
+        console.log();
+        dispatch(theme === 'light' ? toggleDark() : toggleLight());
     }
 
     return (

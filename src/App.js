@@ -3,7 +3,7 @@ import Application from './apps/Application';
 import Dock from './os/Dock';
 import './styles/App.scss';
 import { Catalogue } from './data/Catalogue';
-import StyleManager from './styles/StyleManager';
+import StyleManager from './helper-functions/StyleManager';
 
 function App() {
   const [apps, setApps] = useState([]);

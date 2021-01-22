@@ -1,10 +1,12 @@
+@import "../master";
+
 $iconSize: 3rem;
 
 .messages {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     .users {
         display: flex;
         flex-direction: column;
@@ -12,7 +14,13 @@ $iconSize: 3rem;
         flex-basis: content;
         height: 100%;
         overflow: auto;
-        background: green;
+        .dark {
+            background: $accent1-dark;
+        }
+
+        .light {
+            background: $accent1-light;
+        }
 
         .user-bubble {
             display: flex;
@@ -20,12 +28,23 @@ $iconSize: 3rem;
             padding: 1rem;
             margin: 0.5rem;
             border-radius: 0.4rem;
-            background: magenta;
+            &.selected {
+                background: magenta;
+            }
+
             .icon {
                 width: $iconSize;
                 border-radius: 50%;
                 height: $iconSize;
                 background-color: black;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                font-weight: 800;
+                text-transform: capitalize;
+
             }
             text-align: center;
         }
@@ -42,7 +61,7 @@ $iconSize: 3rem;
             padding: 1rem;
         }
         .thread {
-            background:brown;
+            background: brown;
         }
     }
 }
