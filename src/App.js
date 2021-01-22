@@ -55,6 +55,7 @@ function App() {
   document.documentElement.style.setProperty('--$bg-dark', 'pink');
   return (
     <div className="os">
+      
       <StyleManager/>
       {renderApps}
       <Dock addToView={openApp} catalogue={Catalogue}/>

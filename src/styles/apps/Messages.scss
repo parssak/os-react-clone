@@ -14,22 +14,30 @@ $iconSize: 3rem;
         flex-basis: content;
         height: 100%;
         overflow: auto;
-        padding: 0.6rem;
-        .dark {
-            background: $accent1-dark;
-        }
+        background: rgba(110, 104, 104, 0);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(4px);
+        // border-radius: 10px;
 
-        .light {
-            background: $accent1-light;
-        }
+        // &.dark {
+        //     background: $transparent-dark;
+        // }
+
+        // &.light {
+        //     z-index: -1;
+        //     background: $transparent-light;
+        // }
 
         .user-bubble {
             display: flex;
             flex-direction: column;
             padding: 1rem;
-            margin: 0.5rem;
+            margin: 1rem;
+            margin-bottom: 0.5rem;
             border-radius: 0.4rem;
             background: none;
+
             &.selected {
                 &.dark {
                     background: $selected-dark;
@@ -61,7 +69,7 @@ $iconSize: 3rem;
     .content {
         &.dark {
             background: $bg2-dark;
-             & > * {
+            & > * {
                 background: $accent2-dark;
             }
         }

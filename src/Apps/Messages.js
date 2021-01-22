@@ -18,8 +18,7 @@ export default function Messages() {
 
     return (
         <div className={"messages " + theme}>
-
-            <div className="users bleft">
+            <div className={"users bleft " + theme}>
                     {Contacts.map((e) => (
                         <UserBubble
                             name={e.name}
@@ -27,7 +26,6 @@ export default function Messages() {
                             clicked={clickedUser} user={e}
                             isSelected={selectedUser} />))}
             </div>
-
             <div className={"content bright "+ theme}>
                 {selectedUser &&
                     <>
