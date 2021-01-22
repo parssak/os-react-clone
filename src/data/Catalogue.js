@@ -1,7 +1,7 @@
-import Firefox from './apps/Firefox';
-import Messages from './apps/Messages';
-import Spotify from './apps/Spotify';
-import Mail from './apps/Mail';
+import Firefox from '../apps/Firefox';
+import Messages from '../apps/Messages';
+import Spotify from '../apps/Spotify';
+import Mail from '../apps/Mail';
 
 const firefox = {
     name: "firefox",

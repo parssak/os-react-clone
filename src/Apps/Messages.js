@@ -1,20 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import UserBubble from '../helper-components/Messages/UserBubble';
+import { Contacts } from '../data/Contacts';
 import "../styles/apps/Messages.scss";
 
-
 export default function Messages() {
+    const [selectedUser, setSelectedUser] = useState(Contacts[0]);
+
+    function clickedUser(e) {
+        if (selectedUser === null || selectedUser.name !== e.name) {
+            console.log("changed user", e);
+            setSelectedUser(e);
+        }
+    }
+
     return (
         <div className="messages">
             <div className="users bleft">
-                <UserBubble />
-                <UserBubble />
-                <UserBubble />
-                <UserBubble />
-                <UserBubble />
+                {Contacts.map((e) => (<UserBubble name={e.name} key={e.name} clicked={clickedUser} user={e}/>))}
             </div>
+
             <div className="content bright">
-                This is the content
+                {selectedUser &&
+                <>
+                    <div className="to">{selectedUser.name}</div>
+                    <div className="thread">
+
+                    </div>
+                    </>}
             </div>
         </div>
     )

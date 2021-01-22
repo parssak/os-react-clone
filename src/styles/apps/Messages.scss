@@ -37,6 +37,12 @@ $iconSize: 3rem;
         width: 100%;
         height: 100%;
         overflow: auto;
-        // border-bottom-right-radius: 10px;
+        .to {
+            background: purple;
+            padding: 1rem;
+        }
+        .thread {
+            background:brown;
+        }
     }
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Application from './apps/Application';
 import Dock from './os/Dock';
 import './styles/App.scss';
-import { Catalogue } from './Catalogue';
+import { Catalogue } from './data/Catalogue';
 import StyleManager from './styles/StyleManager';
 
 function App() {
@@ -52,7 +52,7 @@ function App() {
   }
 
   let renderApps = apps.map(app => (<Application name={app.name} key={app.key} closeApp={closeApp} body={app.body} />));
-  
+  document.documentElement.style.setProperty('--$bg-dark', 'pink');
   return (
     <div className="os">
       <StyleManager/>
