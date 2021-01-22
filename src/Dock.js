@@ -16,9 +16,6 @@ export default function Dock({addToView, catalogue}) {
                     <AppShortcut name={e.name} color={e.color} openApp={openApplication} />
                 ))
             }
-            {/* <AppShortcut name="spotify" color='limegreen' openApp={openApplication}/> */}
-            {/* <AppShortcut name="vscode" color='lightblue' openApp={openApplication}/> */}
-            {/* <AppShortcut name="messages" color='green' openApp={openApplication}/> */}
         </div>
     )
 }

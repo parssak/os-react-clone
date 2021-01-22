@@ -13,9 +13,16 @@ const spotify = {
   name: "spotify",
   color: 'limegreen'
 }
+const mail = {
+  name: "mail",
+  color: 'lightblue'
+}
+const messages = {
+  name: "messages",
+  color: 'green'
+}
 
-
-const catalogue = [firefox, spotify]
+const catalogue = [firefox, spotify, mail, messages]
 
 
 function App() {

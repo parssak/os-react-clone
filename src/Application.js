@@ -16,12 +16,12 @@ export default function Application({ name, closeApp }) {
     return (
         <Draggable handle=".handle">
             <div className="app">
-                <TopBar closeWindow={closeWindow} />
+                <TopBar closeWindow={closeWindow} name={name}/>
                 <Resizable defaultSize={{
                     width: 320,
                     height: 200,
                 }}>
-                    {name}
+                    <h2>{name}</h2>
                 </Resizable>
             </div>
         </Draggable>

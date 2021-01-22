@@ -13,6 +13,10 @@ body {
     min-width: 20rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     position: absolute;
+    h2 {
+        margin-left: 1em;
+        text-transform: capitalize;
+    }
 
     .top-bar {
         border-top-left-radius: 0.7rem;
@@ -26,7 +30,17 @@ body {
             height: 1em;
             text-align: center;
             vertical-align: auto;
-            background-color: lightgrey;
+            &.exit,
+            &.minimize,
+            &.maximize {
+                background-color: lightgrey;
+            }
+
+            &.barName {
+                flex-grow: 1;
+                flex-basis: content;
+                flex-shrink: -1;
+            }
             padding: 0.1rem;
             margin: 0.4rem;
             cursor: pointer;
@@ -52,7 +66,7 @@ body {
 
     .icon {
         border-radius: 1rem;
-        background-color:blue;
+        background-color: blue;
         width: 4rem;
         height: 4rem;
     }
