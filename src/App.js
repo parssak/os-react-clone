@@ -3,10 +3,9 @@ import './App.scss';
 import Application from './Application';
 import Dock from './Dock';
 
-
 const firefox = {
   name: "firefox",
-  color: '#ff4500'
+  color: '#ff4500',
 }
 
 const spotify = {

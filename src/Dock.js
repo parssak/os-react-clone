@@ -2,7 +2,7 @@ import React from 'react'
 import AppShortcut from './AppShortcut'
 
 
-export default function Dock({addToView, catalogue}) {
+export default function Dock({ addToView, catalogue }) {
 
     function openApplication(name) {
         console.log("DOCK CLICKED", name);
@@ -11,11 +11,11 @@ export default function Dock({addToView, catalogue}) {
 
     return (
         <div className="dock">
-            {
-                catalogue.map((e) => (
-                    <AppShortcut name={e.name} color={e.color} openApp={openApplication} />
-                ))
-            }
+                {
+                    catalogue.map((e) => (
+                        <AppShortcut name={e.name} color={e.color} openApp={openApplication} />
+                    ))
+                }
         </div>
     )
 }
