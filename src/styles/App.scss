@@ -2,7 +2,6 @@
 $borderRadius: 0.7rem;
 html,
 body {
-    // background-image: $bg-dark;
     background-image: url("./backgroundimg.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -16,7 +15,14 @@ body {
     overflow: hidden;
 }
 
-// background: linear-gradient(90deg, #ffff00 6%, #ffa500 25%, #f14444 45%, #d53567 55%, #9a109a 94%);
+.glassy {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 0.7rem;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
 
 .app {
     &.dark {
@@ -26,15 +32,6 @@ body {
         background: $transparent-light;
     }
 
-    // background: rgba(110, 104, 104, 0);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(4px);
-
-    border-radius: 0.7rem;
-    display: inline-block;
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
-    position: absolute;
     h2,
     h3,
     p {
