@@ -1,13 +1,24 @@
 import React from 'react'
 import AppShortcut from './AppShortcut'
 
-export default function Dock() {
+
+export default function Dock({addToView, catalogue}) {
+
+    function openApplication(name) {
+        console.log("DOCK CLICKED", name);
+        addToView(name)
+    }
+
     return (
         <div className="dock">
-            <AppShortcut name="firefox" color='#ff4500'/>
-            <AppShortcut name="spotify" color='limegreen'/>
-            <AppShortcut name="vscode" color='lightblue'/>
-            <AppShortcut name="messages" color='green'/>
+            {
+                catalogue.map((e) => (
+                    <AppShortcut name={e.name} color={e.color} openApp={openApplication} />
+                ))
+            }
+            {/* <AppShortcut name="spotify" color='limegreen' openApp={openApplication}/> */}
+            {/* <AppShortcut name="vscode" color='lightblue' openApp={openApplication}/> */}
+            {/* <AppShortcut name="messages" color='green' openApp={openApplication}/> */}
         </div>
     )
 }

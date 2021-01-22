@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function TopBar() {
+export default function TopBar({closeWindow}) {
     return (
         <div className="top-bar handle">
-            <div className="exit">
+            <div className="exit" onClick={() => closeWindow()}>
                 X
                     </div>
             <div className="minimize">
