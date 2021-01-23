@@ -5,8 +5,7 @@ const toggleTheme = (state, action) => {
         case 'dark':
             return 'dark';
         default: {
-            return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ?
-                'dark' : 'light'
+            return (state || 'dark');
         }   
     }
 };

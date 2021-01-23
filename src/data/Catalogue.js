@@ -43,7 +43,7 @@ const terminal = {
     name: "terminal",
     color: 'green',
     body: <Terminal />,
-    image: './images/messages.png'
+    image: './images/terminal.png'
 }
 
 const todo = {
@@ -53,4 +53,4 @@ const todo = {
     image: './images/messages.png'
 }
 
-export const Catalogue = [firefox, spotify, mail, messages, drawing, terminal, todo]
+export const Catalogue = [firefox, spotify, mail, messages, terminal, todo]

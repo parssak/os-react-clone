@@ -1,16 +1,11 @@
 const appManager = (state, action) => {
     switch (action.type) {
         case 'open-app':
-            return { // returning a copy of orignal state 
-                ...state, //copying the original state
-                apps: [...state.apps, action.payload] //new todos array 
-            }
+            return [...state, action.payload] //new todos array 
+        // case '@@INIT':
+        //     return []
         default:
-            console.log("hit this default");
-            return {
-                ...state, //copying the original state
-                apps: [] //new todos array 
-            }
+            return (state || []);
     }
 };
 export default appManager;

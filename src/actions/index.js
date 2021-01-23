@@ -9,8 +9,8 @@ export const toggleDark = () => {
         type: 'dark'
     };
 };
-export const openApp = (data) => {
-    console.log("called this");
+
+export const openApplication = (data) => {
     return {
         type: 'open-app',
         payload: data

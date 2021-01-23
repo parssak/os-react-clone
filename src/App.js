@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Application from './apps/Application';
 import Dock from './os/Dock';
-import './styles/App.scss';
 import { Catalogue } from './data/Catalogue';
 import StyleManager from './helper-functions/StyleManager';
 import { useSelector, useDispatch } from 'react-redux';
-import { openApp } from './actions';
+import { openApplication } from './actions';
+import './styles/App.scss';
 
 export default function App() {
-  const apps = useSelector(state => state.apps.apps);
+  const apps = useSelector(state => state.apps);
   const dispatch = useDispatch();
 
   function openAppWithRedux(appName) {
-    console.log("OPENING APPPPPPP", appName);
-    dispatch(openApp(appName));
+    dispatch(openApplication(appName));
   }
 
   function openApplicationFromShortcut(appName) {
@@ -35,37 +34,21 @@ export default function App() {
         newApp = e;
       }
     })
-
     if (newApp === null) return;
     newApp.key = 'app-window' + apps.length
     openAppWithRedux(newApp);
-    console.log();
   }
 
   function closeApp(appName) {
-    // let index = 0;
-    // let appIndex = -1;
-    // apps.forEach(e => {
-    //   if (e.name === appName) {
-    //     appIndex = index;
-    //   }
-    //   index++;
-    // })
-    // if (index !== -1) {
-    //   let allApps = apps;
-    //   allApps.splice(appIndex, 1);
-    //   setApps(allApps);
-    // }
-    // setToggler(!toggler);
+    // todo
   }
 
-  let renderApps = apps.map(app => (<Application
+  let renderApps = Array.isArray(apps) ? apps.map(app => (<Application
     name={app.name}
     key={app.key}
     body={app.body}
-    openApp={openApp}
     closeApp={closeApp}
-  />));
+  />)) : null;
 
   return (
     <div className="os">

@@ -13,7 +13,6 @@ body {
 
     color: $text-dark;
     overflow: hidden;
-   
 }
 
 .glassy {
@@ -23,7 +22,7 @@ body {
     border-radius: 0.7rem;
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
     position: absolute;
-     transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .app {
@@ -142,4 +141,11 @@ body {
 
 input:focus::placeholder {
     color: transparent;
+}
+
+input {
+    color: $text-light;
+    &.dark {
+        color: $text-dark;
+    }
 }

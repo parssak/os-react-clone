@@ -1,7 +1,38 @@
+@import "../master";
+
 .firefox {
     display: flex;
+    position: relative;
     flex-direction: column;
     .search-bar {
-        background-color: blue;
+        background-color: $bg2-light;
+        &.dark {
+            background-color: $bg2-dark;
+        }
+        
+        display: flex;
+        overflow: hidden;
+        input {
+            border: none;
+            outline: inherit;
+            border-style: none;
+            font-size: 1.5rem;
+            background: none;
+            margin: 2rem;
+            
+        }
+
+        // button {
+        //     padding: none;
+        //     background: green;
+        //     border: none;
+        //     // all: unset;
+        //     color: orange;
+        //     -webkit-text-fill-color: orange;
+        //     cursor: pointer;
+        //     border-radius: 100%;
+        //     padding: 1em;
+        //     margin: 1em;
+        // }
     }
 }

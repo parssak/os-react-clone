@@ -4,23 +4,11 @@ import { Resizable } from 're-resizable';
 import TopBar from './TopBar';
 import { useSelector } from 'react-redux';
 
-export default function Application({ name, closeApp, body, openApp }) {
+export default function Application({ name, closeApp, body}) {
     const theme = useSelector(state => state.theme);
 
     function closeWindow() {
         closeApp(name);
-    }
-
-    function openApplication(appName) {
-        openApp(name);
-
-    }
-
-    if (name === "terminal") {
-        console.log("this is a terminal");
-        console.log(body);
-        // body.props({ openApp: openApplication });
-        console.log(body);
     }
 
     return (
