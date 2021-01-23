@@ -2,6 +2,9 @@ import Firefox from '../apps/Firefox';
 import Messages from '../apps/Messages';
 import Spotify from '../apps/Spotify';
 import Mail from '../apps/Mail';
+import Drawing from '../apps/Drawing';
+import Terminal from '../apps/Terminal';
+import Todo from '../apps/Todo';
 
 const firefox = {
     name: "chrome",
@@ -29,4 +32,25 @@ const messages = {
     image: './images/messages.png'
 }
 
-export const Catalogue = [firefox, spotify, mail, messages]
+const drawing = {
+    name: "draw",
+    color: 'green',
+    body: <Drawing />,
+    image: './images/chrome.png'
+}
+
+const terminal = {
+    name: "terminal",
+    color: 'green',
+    body: <Terminal />,
+    image: './images/messages.png'
+}
+
+const todo = {
+    name: "todo",
+    color: 'green',
+    body: <Todo/>,
+    image: './images/messages.png'
+}
+
+export const Catalogue = [firefox, spotify, mail, messages, drawing, terminal, todo]
