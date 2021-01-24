@@ -7,7 +7,6 @@ export default function Dock({ addToView, catalogue }) {
     const theme = useSelector(state => state.theme);
 
     function openApplication(name) {
-        console.log("DOCK CLICKED", name);
         addToView(name)
     }
 

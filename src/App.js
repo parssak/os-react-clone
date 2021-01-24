@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Application from './apps/Application';
 import Dock from './os/Dock';
 import { Catalogue } from './data/Catalogue';

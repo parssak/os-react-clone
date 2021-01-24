@@ -23,6 +23,7 @@ body {
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
     position: absolute;
     transition: background-color 0.5s ease-in-out;
+    
 }
 
 .app {
@@ -32,6 +33,7 @@ body {
     &.light {
         background: $transparent-light;
     }
+    
 
     h2,
     h3,
@@ -52,12 +54,11 @@ body {
         .bleft {
             border-bottom-left-radius: $borderRadius;
         }
+        overflow: hidden;
     }
 
     .top-bar {
-        border-top-left-radius: 0.7rem;
-        border-top-right-radius: 0.7rem;
-        display: flex;
+        // display: flex;
         // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
         &.dark {
             background: $accent1-dark;
@@ -65,27 +66,7 @@ body {
         &.light {
             background: $accent1-light;
         }
-        & > * {
-            border-radius: 50%;
-            width: 1em;
-            height: 1em;
-            text-align: center;
-            vertical-align: auto;
-            &.exit,
-            &.minimize,
-            &.maximize {
-                background-color: darkgrey;
-            }
-
-            &.barName {
-                flex-grow: 1;
-                flex-basis: content;
-                flex-shrink: -1;
-            }
-            padding: 0.1rem;
-            margin: 0.4rem;
-            cursor: pointer;
-        }
+        cursor: pointer;
     }
 }
 
@@ -137,6 +118,7 @@ body {
     font-size: 0.8rem;
     text-transform: capitalize;
     text-align: center;
+    
 }
 
 input:focus::placeholder {
