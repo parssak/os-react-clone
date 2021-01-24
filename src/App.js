@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Application from './apps/Application';
 import Dock from './os/Dock';
 import { Catalogue } from './data/Catalogue';
@@ -10,6 +10,7 @@ import './styles/App.scss';
 export default function App() {
   const apps = useSelector(state => state.apps);
   const dispatch = useDispatch();
+  const [toggle, setToggle] = useState(false);
 
   function openAppWithRedux(appName) {
     dispatch(openApplication(appName));
@@ -39,16 +40,17 @@ export default function App() {
     openAppWithRedux(newApp);
   }
 
-  function closeApp(appName) {
-    // todo
+  function Toggle() {
+    setToggle(!toggle);
   }
 
   let renderApps = Array.isArray(apps) ? apps.map(app => (<Application
     name={app.name}
     key={app.key}
     body={app.body}
-    closeApp={closeApp}
+    toggle={Toggle}
   />)) : null;
+
 
   return (
     <div className="os">

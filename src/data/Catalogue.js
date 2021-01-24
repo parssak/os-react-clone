@@ -50,7 +50,7 @@ const todo = {
     name: "todo",
     color: 'green',
     body: <Todo/>,
-    image: './images/messages.png'
+    image: './images/todo.png'
 }
 
 export const Catalogue = [firefox, spotify, mail, messages, terminal, todo]

@@ -14,6 +14,8 @@ $iconSize: 3rem;
         flex-basis: content;
         height: 100%;
         overflow: auto;
+        overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
 
         .user-bubble {
             display: flex;
@@ -30,15 +32,14 @@ $iconSize: 3rem;
                 }
 
                 &.light {
-                    // background: magenta;
                     background: $selected-light;
                 }
             }
 
             .icon {
                 width: $iconSize;
-                border-radius: 50%;
                 height: $iconSize;
+                border-radius: 50%;
                 background-color: black;
                 color: white;
                 display: flex;

@@ -3,6 +3,7 @@ import { ReactTerminal } from "react-terminal";
 import { useSelector, useDispatch } from 'react-redux';
 import { openApplication } from '../actions';
 import { Catalogue } from '../data/Catalogue';
+import { toggleLight, toggleDark } from '../actions';
 
 let root = "root"
 let arrows = " >>>"
@@ -10,14 +11,31 @@ let arrows = " >>>"
 export default function Terminal() {
     const [path, setPath] = useState(root)
     const dispatch = useDispatch();
+    const theme = useSelector(state => state.theme);
+
     const commands = {
+        help: help(),
         hello: "Hi there!",
         ls: "Desktop    Downloads  ...",
         cd: (directory) => cd(directory),
         open: (appName) => {
             openAPP(appName)
-        }
+        },
+        theme: (type) => changeTheme(type)
     };
+
+    function changeTheme(type) {
+
+        if (!type) dispatch(theme === 'light' ? toggleDark() : toggleLight());
+        else if (type === 'light') dispatch(toggleLight());
+        else if (type === 'dark') dispatch(toggleDark());
+
+        return `Changed theme to: ${theme === 'light' ? 'dark' : 'light'}`
+    }
+
+    function help() {
+        return "hello \n how are you today> \n i'll be your host \n uwu"
+    }
 
     function cd(newLocation) {
         if (newLocation === ".") return "Didn't change directory";

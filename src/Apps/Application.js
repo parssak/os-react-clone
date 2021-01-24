@@ -2,13 +2,16 @@ import React from 'react'
 import Draggable from 'react-draggable';
 import { Resizable } from 're-resizable';
 import TopBar from './TopBar';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { closeApplication } from '../actions';
 
-export default function Application({ name, closeApp, body}) {
+export default function Application({ name, body, toggle}) {
     const theme = useSelector(state => state.theme);
+    const dispatch = useDispatch();
 
     function closeWindow() {
-        closeApp(name);
+        dispatch(closeApplication(name));
+        toggle();
     }
 
     return (

@@ -16,3 +16,10 @@ export const openApplication = (data) => {
         payload: data
     };
 };
+
+export const closeApplication = (appName) => {
+    return {
+        type: 'quit-app',
+        appName: appName
+    }
+}
