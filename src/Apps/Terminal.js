@@ -12,6 +12,8 @@ export default function Terminal() {
     const [path, setPath] = useState(root)
     const dispatch = useDispatch();
     const theme = useSelector(state => state.theme);
+    const apps = useSelector(state => state.apps);
+
 
     const commands = {
         help: help(),
@@ -49,11 +51,21 @@ export default function Terminal() {
     }
     function openAPP(appName) {
         let chosenApp = null;
+        
         Catalogue.forEach(e => {
             if (e.name === appName) {
                 chosenApp = e;
             }
         })
+
+        let alreadyOpen = false;
+        apps.forEach(e => {
+            if (e.name === appName) {
+                alreadyOpen = true;
+
+            }
+        })
+        if (alreadyOpen) return;
 
         if (chosenApp) {
             console.log("found!");

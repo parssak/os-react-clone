@@ -32,8 +32,8 @@ export default function Application({ name, body, toggle}) {
 
     function fullscreen() {
         console.log("enteeredfddf  ");
-        var w = window.innerWidth;
-        var h = window.innerHeight;
+        var w = window.innerWidth - 100;
+        var h = window.innerHeight - 100;
         setAppDimensions({
             width: w,
             height: h

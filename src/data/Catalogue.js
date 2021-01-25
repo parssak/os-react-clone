@@ -5,6 +5,8 @@ import Mail from '../apps/Mail';
 import Drawing from '../apps/Drawing';
 import Terminal from '../apps/Terminal';
 import Todo from '../apps/Todo';
+import Playground from '../apps/Playground';
+import TeaBlocks from '../apps/TeaBlocks';
 
 const firefox = {
     name: "chrome",
@@ -53,4 +55,19 @@ const todo = {
     image: './images/todo.png'
 }
 
-export const Catalogue = [firefox, spotify, mail, messages, terminal, todo]
+const playground = {
+    name: "playground",
+    color: 'green',
+    body: <Playground />,
+    image: './images/todo.png'
+}
+
+const diagram = {
+    name: "diagram",
+    color: 'green',
+    body: <TeaBlocks />,
+    image: './images/spotify.png'
+}
+
+
+export const Catalogue = [firefox, diagram, mail, messages, terminal, todo, playground]
