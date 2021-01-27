@@ -7,6 +7,7 @@ import Terminal from '../apps/Terminal';
 import Todo from '../apps/Todo';
 import Playground from '../apps/Playground';
 import TeaBlocks from '../apps/TeaBlocks';
+import LatexTest from '../apps/LatexTest';
 
 const firefox = {
     name: "chrome",
@@ -69,5 +70,20 @@ const diagram = {
     image: './images/spotify.png'
 }
 
+const latex = {
+    name: "latex",
+    color: 'green',
+    body: <LatexTest />,
+    image: './images/chrome.png'
+}
 
-export const Catalogue = [firefox, diagram, mail, messages, terminal, todo, playground]
+
+export const Catalogue = [firefox,
+    diagram,
+    mail,
+    messages,
+    terminal,
+    todo,
+    playground,
+    latex
+]

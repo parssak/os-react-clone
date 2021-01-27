@@ -15,6 +15,7 @@
     "react-dom": "^17.0.1",
     "react-draggable": "^4.4.3",
     "react-flow-renderer": "^8.5.0",
+    "react-latex": "^2.0.0",
     "react-redux": "^7.2.2",
     "react-resizable": "^1.11.0",
     "react-scripts": "4.0.1",
